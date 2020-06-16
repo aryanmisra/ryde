@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import {Col, Row, Grid} from 'react-native-easy-grid';
@@ -29,6 +30,7 @@ export default class CameraPage extends React.Component {
         const audio = await Permissions.askAsync(Permissions.AUDIO_RECORDING);
         const hasCameraPermission = (camera.status === 'granted' && audio.status === 'granted');
 
+        
         this.setState({ hasCameraPermission });
 
         await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
