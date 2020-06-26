@@ -9,6 +9,9 @@ import {Ionicons} from '@expo/vector-icons';
 
 import styles from './styles';
 
+import {  NodeCameraView } from 'react-native-nodemediaclient';
+
+
 
 // import Toolbar from './toolbar'
 
@@ -72,12 +75,22 @@ export default class CameraPage extends React.Component {
         return (
             <React.Fragment>
                 <View>
-                    <Camera
+                    {/* <Camera
                         flashMode={this.state.flash}
                         type={this.state.camSide}
                         style={styles.preview}
                         ref={camera => this.camera = camera}
+                    /> */}
+                   <NodeCameraView 
+                    style={styles.nodeCameraView}
+                    ref={(vb) => { this.vb = vb }}
+                    outputUrl = {"rtmp://live.mux.com/app/ab4d9cb3-53db-9a31-b3c7-14b2f83e8db4"}
+                    camera={{ cameraId: 1, cameraFrontMirror: true }}
+                    audio={{ bitrate: 32000, profile: 1, samplerate: 44100 }}
+                    video={{ preset: 12, bitrate: 400000, profile: 1, fps: 15, videoFrontMirror: false }}
+                    autopreview={true}
                     />
+
                 </View>
                 <View style={styles.borderCol}>
 

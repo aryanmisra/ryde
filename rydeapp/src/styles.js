@@ -70,5 +70,12 @@ export default StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 10
         
-    }
+    },
+    nodeCameraView: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
 });
