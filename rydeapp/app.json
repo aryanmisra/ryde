@@ -23,8 +23,12 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "requireFullScreen": true
-
-    }
+      "requireFullScreen": true,
+      "bundleIdentifier": "ryde"
+    },
+    "android": {
+      "package": "ryde"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
